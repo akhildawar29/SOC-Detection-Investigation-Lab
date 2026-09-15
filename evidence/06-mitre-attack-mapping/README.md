@@ -2,17 +2,17 @@
 
 ## Objective
 
-Map the observed Windows endpoint activity identified during the SOC investigation to relevant MITRE ATT&CK techniques.
+Map the Windows endpoint activity observed during the SOC investigation to relevant MITRE ATT&CK techniques and document the evidence supporting each mapping.
 
 ## Identified Techniques
 
 | MITRE ATT&CK ID | Technique | Evidence Observed |
 |---|---|---|
-| T1059.001 | PowerShell | PowerShell execution identified through Sysmon Event ID 1 and analysed in Splunk. |
-| T1059.003 | Windows Command Shell | Command-line execution activity observed through Windows process creation telemetry. |
+| T1059.001 | PowerShell | PowerShell execution was identified through Sysmon Event ID 1 and analysed in Splunk. |
+| T1059.003 | Windows Command Shell | Command-line execution activity was observed through Windows process creation telemetry. |
 | T1016 | System Network Configuration Discovery | Network discovery commands were identified during investigation of endpoint activity. |
-| T1571 | Non-Standard Port | Network-related activity was reviewed for communication over non-standard ports. |
-| T1105 | Ingress Tool Transfer | `curl.exe` activity demonstrated command-line retrieval of remote content and was correlated with Sysmon telemetry. |
+| T1571 | Non-Standard Port | Network-related activity was reviewed for communication occurring over non-standard ports. |
+| T1105 | Ingress Tool Transfer | `curl.exe` was observed retrieving remote content. This behaviour is consistent with T1105 when used to transfer files or tools from an external system. |
 
 ## Evidence Sources
 
@@ -27,12 +27,10 @@ The ATT&CK mapping was supported by:
 
 ## Analysis
 
-The investigation demonstrates how endpoint telemetry can be translated into behavioural indicators rather than relying only on individual alerts.
+The investigation identified multiple behaviours that can be mapped to MITRE ATT&CK techniques. PowerShell and Windows command-shell activity demonstrate command and scripting interpreter usage, while system and network discovery activity reflects host reconnaissance behaviour.
 
-Process creation, command-line activity, PowerShell execution, DNS queries, and network-related events were correlated to reconstruct activity on the Windows endpoint. These behaviours were then mapped to relevant MITRE ATT&CK techniques to provide a standardized framework for describing the observed activity.
+Network telemetry was correlated with process activity to provide additional context around outbound communication. The observed `curl.exe` activity involved retrieval of remote content and was therefore assessed as behaviour consistent with Ingress Tool Transfer (T1105). However, the presence of `curl.exe` alone does not establish malicious intent; process context, destination, command-line arguments, and related telemetry must be considered before classifying the activity as malicious.
 
-MITRE ATT&CK mapping helps SOC analysts communicate findings consistently and connect technical evidence with adversary behaviours and detection opportunities.
+## Analyst Assessment
 
-## Conclusion
-
-The investigation identified multiple behaviours relevant to MITRE ATT&CK, including PowerShell execution, command-shell activity, network discovery, network communication, and remote content retrieval. Correlating these behaviours across Sysmon and Splunk provides stronger investigative context than analysing individual events in isolation.
+The observed activity demonstrates how endpoint process telemetry, DNS events, and network evidence can be correlated within a SOC investigation. Mapping the findings to MITRE ATT&CK provides a standard framework for describing the behaviours observed while maintaining a distinction between suspicious activity and confirmed malicious activity.
