@@ -1,5 +1,5 @@
 # SOC-Detection-Investigation-Lab
-SOC investigation lab using Splunk and Sysmon to analyze Windows endpoint telemetry, reconstruct process and network activity, map findings to MITRE ATT&amp;CK, and document incident-response evidence.
+SOC investigation lab using Splunk and Sysmon to analyze Windows endpoint telemetry, reconstruct process and network activity, map findings to MITRE ATT&CK, and document incident-response evidence.
 
 **Author:** Akhil Dawar  
 **Focus:** SOC Analysis | Threat Detection | Incident Investigation | SIEM | Windows Endpoint Security
@@ -194,17 +194,14 @@ SOC-Detection-Investigation-Lab/
 ├── report/
 │   └── SOC-Detection-Investigation-Lab-Akhil-Dawar.pdf
 │
-├── evidence/
-│   └── splunk-screenshots/
-│
-├── queries/
-│   └── investigation-queries.md
-│
-├── detections/
-│   └── detection-use-cases.md
-│
-└── docs/
-    └── investigation-notes.md
+└── evidence/
+    ├── 01-sysmon-ingestion/
+    ├── 02-process-execution/
+    ├── 03-powershell-investigation/
+    ├── 04-dns-network-correlation/
+    ├── 05-system-network-discovery/
+    ├── 06-mitre-attack-mapping/
+    └── 07-incident-correlation/
 ```
 
 ---
