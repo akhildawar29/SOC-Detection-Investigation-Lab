@@ -192,7 +192,7 @@ SOC-Detection-Investigation-Lab/
 ├── README.md
 │
 ├── report/
-│   └── [View investigation report](report/Akhil_Dawar_SOC_Detection_Investigation_Lab.pdf)
+│   └── Akhil_Dawar_SOC_Detection_Investigation_Lab.pdf
 │
 └── evidence/
     ├── 01-sysmon-ingestion/
@@ -207,6 +207,8 @@ SOC-Detection-Investigation-Lab/
 ---
 
 ## Investigation Report
+
+[View investigation report](report/Akhil_Dawar_SOC_Detection_Investigation_Lab.pdf)
 
 A detailed investigation report accompanies this repository and documents:
 
