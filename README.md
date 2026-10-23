@@ -56,15 +56,15 @@ Primary telemetry source:
 
 The investigation followed a repeatable SOC workflow:
 
-**Detect → Triage → Scope → Correlate → Reconstruct → Map → Assess → Recommend**
+**Detect → Investigate → Scope → Correlate → Reconstruct → Map → Assess → Recommend**
 
 ### 1. Detection
 
 Sysmon telemetry was ingested into Splunk and reviewed for security-relevant Windows activity.
 
-### 2. Triage
+### 2. Initial Investigate
 
-Initial searches focused on suspicious process execution and command-line behaviour.
+Initial Splunk searches examined process execution and command-line behaviour to identify activity requiring further investigation.
 
 ### 3. Scoping
 
