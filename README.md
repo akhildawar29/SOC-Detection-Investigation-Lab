@@ -62,7 +62,7 @@ The investigation followed a repeatable SOC workflow:
 
 Sysmon telemetry was ingested into Splunk and reviewed for security-relevant Windows activity.
 
-### 2. Initial Investigate
+### 2. Initial Investigation
 
 Initial Splunk searches examined process execution and command-line behaviour to identify activity requiring further investigation.
 
@@ -167,7 +167,7 @@ ATT&CK mappings in this project describe **observed behaviour** and do not indep
 
 This project demonstrates practical experience with:
 
-- SOC investigation and investigation
+- SOC investigation and incident analysis
 - Splunk Search Processing Language (SPL)
 - Windows Sysmon telemetry
 - SIEM-based event correlation
