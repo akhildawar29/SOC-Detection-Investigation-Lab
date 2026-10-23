@@ -187,22 +187,37 @@ This project demonstrates practical experience with:
 ## Repository Structure
 
 ```text
+
 SOC-Detection-Investigation-Lab/
 │
 ├── README.md
+├── evidence/
+│   ├── 01-sysmon-ingestion/
+│   ├── 02-process-execution/
+│   ├── 03-powershell-investigation/
+│   ├── 04-dns-network-correlation/
+│   ├── 05-system-network-discovery/
+│   ├── 06-mitre-attack-mapping/
+│   └── 07-incident-correlation/
 │
-├── report/
-│   └── Akhil_Dawar_SOC_Detection_Investigation_Lab.pdf
+├── queries/
+│   └── README.md
 │
-└── evidence/
-    ├── 01-sysmon-ingestion/
-    ├── 02-process-execution/
-    ├── 03-powershell-investigation/
-    ├── 04-dns-network-correlation/
-    ├── 05-system-network-discovery/
-    ├── 06-mitre-attack-mapping/
-    └── 07-incident-correlation/
+├── docs/
+│   ├── Executive_Summary.md
+│   └── Essential_Eight_Mapping.md
+│
+└── report/
+    ├── Final investigation report (PDF)
+    ├── Editable investigation report (DOCX)
+    └── README.md
+
 ```
+### Additional Technical Documentation
+
+- [Splunk SPL Investigation Queries](queries/README.md) — Detection searches and investigation queries used in the SOC lab.
+- [Executive Summary](docs/Executive_Summary.md) — A concise overview of the investigation, findings, and outcomes.
+- [Essential Eight Mapping](docs/Essential_Eight_Mapping.md) — Mapping of the lab's activities to relevant Australian Essential Eight mitigation strategies.
 
 ---
 
