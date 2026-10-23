@@ -167,7 +167,7 @@ ATT&CK mappings in this project describe **observed behaviour** and do not indep
 
 This project demonstrates practical experience with:
 
-- SOC alert triage and investigation
+- SOC investigation and investigation
 - Splunk Search Processing Language (SPL)
 - Windows Sysmon telemetry
 - SIEM-based event correlation
